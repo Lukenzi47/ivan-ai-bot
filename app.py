@@ -3,7 +3,7 @@ import os
 import openai
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
-
+#test
 # KONFIGURACIJA
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
