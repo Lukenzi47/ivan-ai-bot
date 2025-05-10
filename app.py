@@ -5,7 +5,8 @@ from qdrant_client import QdrantClient
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
 #test
 # KONFIGURACIJA
-openai.api_key = os.getenv("OPENAI_API_KEY")
+import streamlit as st
+openai.api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
 
 qdrant = QdrantClient(
     url="https://7fb35336-432e-4293-acd4-adf59c466d9d.eu-west-1-0.aws.cloud.qdrant.io",
